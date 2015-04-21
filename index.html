@@ -61,17 +61,17 @@
           		<textarea id="jsCode" placeholder="Write JS here"></textarea>
           	</div>
           	
-          	<button id="toast" class="ui-btn">Toast</button>
+<!--          	<button id="toast" class="ui-btn">Toast</button>-->
           </div>
         </div>
         
         <footer data-role="footer" data-position="fixed">
-        	<h3>This is just some footer content</h3>
+        	<h3>&copy; Swami Vivekanada Institute of Science &amp; Technology</h3>
         </footer>
         
         <div data-role="panel" id="left-panel" data-display="overlay">
 					<ul data-role="listview">
-						<li><a href="#libraryDialog" data-transition="flow">Include Coding Libraries</a></li>
+<!--						<li><a href="#libraryDialog" data-transition="flow">Include Coding Libraries</a></li>-->
 						<li><a href="#savingDialog" data-transition="flow">Save Your Code</a></li>
 						<li><a href="#openingDialog" data-transition="flow">Open Your Existing Code</a></li>
 					</ul>
@@ -84,10 +84,11 @@
           <a href="#firstpage" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-left ui-corner-all" data-transition="flip" data-direction="reverse">Home</a>
       </header>
       <div class="ui-content">
-				<iframe id="resultFrame"></iframe>
+				<iframe id="resultFrame" name="resultFrame"></iframe>
 			</div>
 		</section>
 		
+<!--
 		<div id="libraryDialog" data-role="page" data-dialog="true" data-close-btn="right" data-theme="d">
         <div data-role="header">
           <h1>Dialog Title</h1>
@@ -97,6 +98,7 @@
         </div>
         <div data-role="footer"><h2>Dialog Footer</h2></div>
     </div>
+-->
 		
 		<div id="savingDialog" data-role="page" data-dialog="true" data-close-btn="right" data-theme="c">
         <div data-role="header">
@@ -145,6 +147,8 @@
         	</table>
         </div>
     </div>
+    
+    
     <script>
 			
 			emmet.require('textarea').setup({
@@ -167,9 +171,9 @@
 			});
 			
 			$("#runButton").click(function() {
-			
-					$("iframe").contents().find("html").html('<style>'+$("#cssCode").val()+'</style>'+$("#htmlCode").val());
-					document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+						
+							$("iframe").contents().find("html").html('<style>'+$("#cssCode").val()+'</style>'+$("#htmlCode").val());
+							document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
 				
 			});
 		
