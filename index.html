@@ -7,23 +7,26 @@
    	<meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>WebCoder - Test your HTML, CSS and JS Codes</title>
     <!-- the three things that jQuery Mobile needs to work -->
-    <link rel="stylesheet" href="themes/custom.css" />
+    <link rel="stylesheet" href="themes/custom.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.css" />
+    <link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 		<!-- Jquery Library -->
-    <script src="jquery-1.11.2.js" type="text/javascript"></script>
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
 		<!-- Jquery Mobile  -->
-    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+    <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
 		<!-- Library for Emmet - Zencoding -->
-    <script src="emmet.min.js"></script>
+    <script src="plugins/emmet.min.js"></script>
 		<!-- Library for Toast Messaging -- CFTOASTER -->
-   	<link rel="stylesheet" title="default" type="text/css" href="jquery.cftoaster.1.0.1.css"/>	
-		<script type="text/javascript" src="jquery.cftoaster.1.0.1.min.js"></script>
+   	<link rel="stylesheet" title="default" type="text/css" href="plugins/jquery.cftoaster.1.0.1.css"/>	
+		<script type="text/javascript" src="plugins/jquery.cftoaster.1.0.1.min.js"></script>
+		<link rel="stylesheet" href="plugins/linedTextArea/jquery-linedtextarea.css">
+		<script src="plugins/linedTextArea/jquery-linedtextarea.js"></script>
 		<!-- Add to HomeScreen Manifest File	-->
    	<link rel="manifest" href="manifest.json">
    	<link rel="icon" href="favicon.ico">
-   	<link rel="stylesheet" type="text/css" href="add-to-homescreen-master/style/addtohomescreen.css">
-		<script src="add-to-homescreen-master/src/addtohomescreen.js"></script>
+		<!-- Add to HomeScreen Plugin	-->
+   	<link rel="stylesheet" type="text/css" href="plugins/add-to-homescreen-master/style/addtohomescreen.css">
+		<script src="plugins/add-to-homescreen-master/src/addtohomescreen.min.js"></script>
 		<script>
 			addToHomescreen();
 		</script>
@@ -80,7 +83,7 @@
         </div>
         
         <footer data-role="footer" data-position="fixed">
-        	<h3>&copy; Swami Vivekanada Institute of Science &amp; Technology</h3>
+        	<h3>&copy; SVIST CSE Dept.</h3>
         </footer>
         
         <div data-role="panel" id="left-panel" data-display="overlay">
@@ -170,6 +173,8 @@
 			            					// between opening and closing tag) 
 				use_tab: true       // expand abbreviations by Tab key
 			});
+			
+			 $("#htmlCode").linedtextarea();
 			
 			// Swipe to open panel
 			$( document ).on( "pageinit", "#firstpage", function() {
